@@ -9,14 +9,16 @@ const View = () =>{
     });
 
     useEffect(() =>{
-        fetch('http://localhost:8000/data')
+        fetch('https://doston-back.herokuapp.com/data')
         .then(res => res.json())
         .then(data => setData({isFetched:true, data: data.data}))
     }, []);
 
 
+    console.log(data);
+
     const handleDown = () =>{
-        fetch('http://localhost:8000/download/fc99b4dc-dc21-4820-aa49-1426a2a4169f')
+        fetch('https://doston-back.herokuapp.com/download/bb4ed5e3-1391-417c-a1fb-fd8dc0326a20')
         .then((res) => { return res.blob(); })
         .then((data) => {
         var a = document.createElement("a");
