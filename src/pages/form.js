@@ -50,7 +50,7 @@ const Form = () =>{
                 formdata.append(key, value[key])
             }
 
-            fetch('http://localhost:8000/data',{
+            fetch('https://doston-back.herokuapp.com/data',{
                 method:'POST',
                 body: formdata
             })
